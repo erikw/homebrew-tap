@@ -2,7 +2,7 @@ class XdgUrlview < Formula
   desc "URL extractor/launcher. A fork which respects the XDG specification."
   homepage "https://github.com/ozangulle/xdg-urlview"
   url "https://github.com/ozangulle/xdg-urlview/archive/refs/tags/v0.9-xdg-1.0.0.tar.gz"
-  version "v0.9-xdg-1.0.0"
+  version "0.9-xdg-1.0.0"
   sha256 "6a03ce08cba4a7bc16630f17bd8225fc16b01844dfac8f756baae1a14e1d7807"
   license "GPL-2.0-or-later"
 
