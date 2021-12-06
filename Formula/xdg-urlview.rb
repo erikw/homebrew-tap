@@ -1,3 +1,5 @@
+# This formula is based on the upstream package's formula at:
+# https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/urlview.rb
 class XdgUrlview < Formula
   desc "URL extractor/launcher. A fork which respects the XDG specification"
   homepage "https://github.com/ozangulle/xdg-urlview"
@@ -6,7 +8,6 @@ class XdgUrlview < Formula
   sha256 "6a03ce08cba4a7bc16630f17bd8225fc16b01844dfac8f756baae1a14e1d7807"
   license "GPL-2.0-or-later"
   revision 1
-
   livecheck do
     url "https://github.com/ozangulle/xdg-urlview/tags"
     regex(/(\d+(?:[.-]\d+)+-xdg-\d+(?:[.-]\d+)+)/i)
@@ -40,6 +41,17 @@ class XdgUrlview < Formula
     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}",
            "--sysconfdir=#{etc}"
     system "make", "install"
+  end
+
+  def caveats
+    <<~EOS
+      With this patched vesion of urlview, your config file is no longer in
+      $HOME/.urlview
+      but at
+      $XDG_CONFIG_HOME/urlview/urlview.
+
+      $XDG_CONFIG_HOME defaults to ~/.config, thus the config file would typically be at ~/.config/urlview/urlview.
+    EOS
   end
 
   # Run manually with $(brew test xdg-urlview).
