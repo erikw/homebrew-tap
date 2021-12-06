@@ -15,7 +15,7 @@ class XdgUrlview < Formula
     depends_on "automake"
   end
 
-  conflicts_with "urlview", because: "xdg-urlview is a fork of urlview, using the same binary installation paths"
+  conflicts_with "urlview", because: "xdg-urlview this is a fork of urlview, using the same binary installation paths"
 
   def install
     inreplace "urlview.man", "/etc/urlview/url_handler.sh", "open"
