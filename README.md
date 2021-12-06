@@ -1,5 +1,5 @@
 # xdg-urlview Homebrew Tap
-A tap for installing [ozangulle/xdg-urlview](https://github.com/ozangulle/xdg-urlview)
+A tap for installing [ozangulle/xdg-urlview](https://github.com/ozangulle/xdg-urlview).
 
 ## How do I install these formulae?
 `brew install erikw/xdg-urlview/<formula>`
