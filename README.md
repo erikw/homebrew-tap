@@ -13,6 +13,7 @@ More speciically you probably want
 ## Documentation
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
 
+* https://github.com/Homebrew/brew/blob/master/docs/Formula-Cookbook.md
 * How to upload bottles - https://brew.sh/2020/11/18/homebrew-tap-with-bottles-uploaded-to-github-releases/
 
 
@@ -24,8 +25,18 @@ $ brew tap erikw/xdg-urlview git@github.com:erikw/homebrew-xdg-urlview.git
 
 You should really clone the repo with brew-tap, as otherwise commands like brew-audit won't work.
 
-Test a formula for erros now like
-
+Test a formula for erros now like:
 ```console
 $ brew audit --new-formula xdg-urlview
+```
+
+Run tests only like:
+```console
+$ brew test xdg-urlview
+```
+
+
+Build from source like:
+```console
+$ brew install --build-from-source xdg-urlview
 ```
