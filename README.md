@@ -55,4 +55,8 @@ New versions of xdg-urlview can be updated with
 $ brew bump-formular-pr xdg-urlview ...
 ```
 
-To build a new [bottle](https://docs.brew.sh/Bottles), create a PR in the GitHub repo and apply the label `pr-pull`. Let the PR check finish first, before merging. Then the second flow from .github/workflows/publish.yml will run and create the bottle.
+To build a new [bottle](https://docs.brew.sh/Bottles)
+
+1. create a PR in the GitHub repo
+1. wait for the PR checks to become green
+1. apply the label `pr-pull`. This will trigger the second flow from .github/workflows/publish.yml will run and create the bottle.
