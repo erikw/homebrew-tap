@@ -11,6 +11,12 @@ class XdgUrlview < Formula
     regex(/(\d+(?:[.-]\d+)+-xdg-\d+(?:[.-]\d+)+)/i)
   end
 
+  bottle do
+    root_url "https://github.com/erikw/homebrew-xdg-urlview/releases/download/xdg-urlview-0.9-xdg-1.0.0"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, catalina: "e4aa07f46566e01127248a091e3a53f1ae295b963b91845e179be0405f12c3c5"
+  end
+
   on_linux do
     depends_on "automake"
   end
