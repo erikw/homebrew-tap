@@ -14,9 +14,9 @@ class XdgUrlview < Formula
   end
 
   bottle do
-    root_url "https://github.com/erikw/homebrew-xdg-urlview/releases/download/xdg-urlview-0.9-xdg-1.0.0"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, catalina: "e4aa07f46566e01127248a091e3a53f1ae295b963b91845e179be0405f12c3c5"
+    root_url "https://github.com/erikw/homebrew-xdg-urlview/releases/download/xdg-urlview-0.9-xdg-1.0.0_1"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, big_sur: "005302024b4ad6136302d5b66f2a90ba7d56324fe0385fefc69bc914a002fb22"
   end
 
   on_linux do
