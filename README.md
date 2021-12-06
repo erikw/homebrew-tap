@@ -22,12 +22,19 @@ Clone this git repo with the ssh protocol instead of https, by tapping like this
 ```console
 $ brew tap erikw/xdg-urlview git@github.com:erikw/homebrew-xdg-urlview.git
 ```
-
 You should really clone the repo with brew-tap, as otherwise commands like brew-audit won't work.
+
+At a later point, return here by:
+```console
+cd "$(brew --repository erikw/homebrew-xdg-urlview)"
+```
+
+
 
 Test a formula for erros now like:
 ```console
 $ brew audit --new-formula xdg-urlview
+$ brew audit --strict --online xdg-urlview
 ```
 
 Run tests only like:
@@ -39,4 +46,13 @@ $ brew test xdg-urlview
 Build from source like:
 ```console
 $ brew install --build-from-source xdg-urlview
+$ brew reinstall --build-from-source xdg-urlview
 ```
+
+
+New versions of xdg-urlview can be updated with
+```console
+$ brew bump-formular-pr xdg-urlview ...
+```
+
+To build a new [bottle](https://docs.brew.sh/Bottles), create a PR in the GitHub repo and apply the label `pr-pull`. Let the PR check finish first, before merging. Then the second flow from .github/workflows/publish.yml will run and create the bottle.
