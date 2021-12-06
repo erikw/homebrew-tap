@@ -7,7 +7,7 @@ class XdgUrlview < Formula
   version "0.9-xdg-1.0.0"
   sha256 "6a03ce08cba4a7bc16630f17bd8225fc16b01844dfac8f756baae1a14e1d7807"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
   livecheck do
     url "https://github.com/ozangulle/xdg-urlview/tags"
     regex(/(\d+(?:[.-]\d+)+-xdg-\d+(?:[.-]\d+)+)/i)
