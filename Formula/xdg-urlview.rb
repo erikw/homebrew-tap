@@ -1,5 +1,5 @@
 class XdgUrlview < Formula
-  desc "URL extractor/launcher. This is a fork which respects the XDG directory specifications for configuration files"
+  desc "URL extractor/launcher. A fork which respects the XDG specification."
   homepage "https://github.com/ozangulle/xdg-urlview"
   url "https://github.com/ozangulle/xdg-urlview/archive/refs/tags/v0.9-xdg-1.0.0.tar.gz"
   version "v0.9-xdg-1.0.0"
