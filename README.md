@@ -7,8 +7,7 @@ My own homebrew taps featuring formulas for:
 
 Or `brew tap erikw/tap` and then `brew install <formula>`.
 
-More speciically you probably want
-
+More specically you probably want:
 `brew install erikw/tap/xdg-urlview`
 
 ## Documentation
