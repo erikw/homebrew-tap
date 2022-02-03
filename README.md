@@ -1,14 +1,15 @@
-# xdg-urlview Homebrew Tap
-A tap for installing [ozangulle/xdg-urlview](https://github.com/ozangulle/xdg-urlview).
+# Erikw Homebrew Tap
+My own homebrew taps featuring formulas for:
+* [ozangulle/xdg-urlview](https://github.com/ozangulle/xdg-urlview).
 
 ## How do I install these formulae?
-`brew install erikw/xdg-urlview/<formula>`
+`brew install erikw/tap/<formula>`
 
-Or `brew tap erikw/xdg-urlview` and then `brew install <formula>`.
+Or `brew tap erikw/tap` and then `brew install <formula>`.
 
 More speciically you probably want
 
-`brew install erikw/xdg-urlview/xdg-urlview`
+`brew install erikw/tap/xdg-urlview`
 
 ## Documentation
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
@@ -20,13 +21,13 @@ More speciically you probably want
 ## Development
 Clone this git repo with the ssh protocol instead of https, by tapping like this:
 ```console
-$ brew tap erikw/xdg-urlview git@github.com:erikw/homebrew-xdg-urlview.git
+$ brew tap erikw/tap git@github.com:erikw/homebrew-tap.git
 ```
 You should really clone the repo with brew-tap, as otherwise commands like brew-audit won't work.
 
 At a later point, return here by:
 ```console
-cd "$(brew --repository erikw/homebrew-xdg-urlview)"
+cd "$(brew --repository erikw/homebrew-tap)"
 ```
 
 
