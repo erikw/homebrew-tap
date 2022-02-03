@@ -1,4 +1,4 @@
-# Erikw Homebrew Tap
+# Erikw's Homebrew Tap
 My own [Homebrew](https://brew.sh/) tap featuring formulas for:
 * [ozangulle/xdg-urlview](https://github.com/ozangulle/xdg-urlview).
 
