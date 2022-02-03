@@ -1,5 +1,5 @@
 # Erikw Homebrew Tap
-My own [HomeBrew](https://brew.sh/) taps featuring formulas for:
+My own [HomeBrew](https://brew.sh/) tap featuring formulas for:
 * [ozangulle/xdg-urlview](https://github.com/ozangulle/xdg-urlview).
 
 ## How do I install these formulae?
