@@ -3,12 +3,12 @@ My own homebrew taps featuring formulas for:
 * [ozangulle/xdg-urlview](https://github.com/ozangulle/xdg-urlview).
 
 ## How do I install these formulae?
-`brew install erikw/tap/<formula>`
+As one command `brew install erikw/tap/<formula>`, or `brew tap erikw/tap` followed by `brew install <formula>`.
 
-Or `brew tap erikw/tap` and then `brew install <formula>`.
-
-More specically you probably want:
-`brew install erikw/tap/xdg-urlview`
+Here are all formulas you can install from this tap:
+```console
+$ brew install erikw/tap/xdg-urlview`
+```
 
 ## Documentation
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
