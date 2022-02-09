@@ -29,8 +29,6 @@ At a later point, return here by:
 cd "$(brew --repository erikw/homebrew-tap)"
 ```
 
-
-
 Test a formula for erros now like:
 ```console
 $ brew audit --new-formula xdg-urlview
@@ -55,8 +53,7 @@ New versions of xdg-urlview can be updated with
 $ brew bump-formular-pr xdg-urlview ...
 ```
 
-To build a new [bottle](https://docs.brew.sh/Bottles)
-
-1. create a PR in the GitHub repo
-1. wait for the PR checks to become green
-1. apply the label `pr-pull`. This will trigger the second flow from .github/workflows/publish.yml will run and create the bottle.
+To build a new [bottle](https://docs.brew.sh/Bottles):
+1. Create a PR in the GitHub repo
+1. Wait for the PR checks to become green
+1. Apply the label `pr-pull`. This will trigger the second flow from .github/workflows/publish.yml will run and create the bottle.
