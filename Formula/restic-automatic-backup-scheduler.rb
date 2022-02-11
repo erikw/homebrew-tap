@@ -5,6 +5,12 @@ class ResticAutomaticBackupScheduler < Formula
   sha256 "15f8a553e29ccb6c65ff2044392985834c451c51b4405891a47698442f0a532c"
   license "BSD-3-Clause"
 
+  bottle do
+    root_url "https://github.com/erikw/homebrew-tap/releases/download/restic-automatic-backup-scheduler-5.2.0"
+    sha256 cellar: :any_skip_relocation, big_sur:      "eb3df8d6eb97a1d8aa44bce2a6064cd68543c3e4d6d63133d18755e583bb3d58"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "00dc2792b06c4c2cb7f6c519b19dbeb5e3f045871daa4ebd168d037c96d28d62"
+  end
+
   depends_on "restic"
 
   def install
