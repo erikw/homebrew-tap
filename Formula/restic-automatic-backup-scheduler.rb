@@ -1,10 +1,10 @@
 class ResticAutomaticBackupScheduler < Formula
   desc "Automatic restic backup schedule using Backblaze B2 storage & macOS LaunchAgents"
   homepage "https://github.com/erikw/restic-systemd-automatic-backup"
-  url "https://github.com/erikw/restic-systemd-automatic-backup/archive/refs/tags/v5.2.0.tar.gz"
-  sha256 "15f8a553e29ccb6c65ff2044392985834c451c51b4405891a47698442f0a532c"
+  url "https://github.com/erikw/restic-systemd-automatic-backup/archive/refs/tags/v5.3.1.tar.gz"
+  sha256 "aeda2d5818d9d18d271db2b73fda5816fb8f0eff9445570364f068dbc29567e2"
   license "BSD-3-Clause"
-  revision 2
+  revision 1
 
   bottle do
     root_url "https://github.com/erikw/homebrew-tap/releases/download/restic-automatic-backup-scheduler-5.2.0_2"
@@ -22,8 +22,15 @@ class ResticAutomaticBackupScheduler < Formula
       PREFIX=#{prefix}
       INSTALL_PREFIX=#{HOMEBREW_PREFIX}
       SYSCONFDIR=#{etc}/..
+      SYSCONFDIR=#{etc}/..
+      LAUNCHAGENTDIR=#{prefix}
     ]
+
     system "make", "install-launchagent", *args
+
+    # The LaunchAgent need to have a special name for brew-services to pick it up.
+    prefix.install_symlink \
+      "Library/LaunchAgents/com.github.erikw.restic-automatic-backup.plist" => "#{plist_name}.plist"
   end
 
   def caveats
@@ -32,20 +39,16 @@ class ResticAutomaticBackupScheduler < Formula
       To get started with backups, do the following:
 
       1. Edit config files at /etc/restic/*.env.sh
-      2. Possibly edit schedule and profile to use in
-         ~/Library/LaunchAgents/com.github.erikw.restic-automatic-backup.plist
-      3. Install, enable and start the first run!
-         $ launchctl bootstrap gui/$UID ~/Library/LaunchAgents/com.github.erikw.restic-automatic-backup.plist
-         $ launchctl enable gui/$UID/com.github.erikw.restic-automatic-backup
-         $ launchctl kickstart -p gui/$UID/com.github.erikw.restic-automatic-backup
-      4. Use the disable command to temporarily pause the agent, or bootout to uninstall it.
-         $ launchctl disable gui/$UID/com.github.erikw.restic-automatic-backup
-         $ launchctl bootout gui/$UID/com.github.erikw.restic-automatic-backup
+      1. Enable the service:
+         $ brew services start restic-automatic-backup-scheduler
+      2. If you want a different schedule or profile, edit + restart:
+         $ vim ~/Library/LaunchAgents/homebrew.mxcl.restic-automatic-backup-scheduler.plist
+         $ brew services restart restic-automatic-backup-scheduler
+      4. To stop the backups,
+         $ brew services stop restic-automatic-backup-scheduler
 
-
-      **NOTE** If you updated the .plist file, you need to issue the bootout followed by bootrstrap
-      and enable sub-commands of launchctl. This will guarantee that the file is properly reloaded.
-
+      **NOTE** If you updated the .plist file, you need to restart the service to
+      reload the values.
 
       See full tutorial at https://github.com/erikw/restic-systemd-automatic-backup
       ===========
