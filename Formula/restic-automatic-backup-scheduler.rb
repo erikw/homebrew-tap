@@ -29,6 +29,7 @@ class ResticAutomaticBackupScheduler < Formula
     system "make", "install-launchagent", *args
 
     # The LaunchAgent need to have a special name for brew-services to pick it up.
+    # Reference: https://docs.brew.sh/Formula-Cookbook#launchd-plist-files
     prefix.install_symlink \
       "Library/LaunchAgents/com.github.erikw.restic-automatic-backup.plist" => "#{plist_name}.plist"
   end
