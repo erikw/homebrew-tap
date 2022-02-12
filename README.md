@@ -6,7 +6,7 @@ My own [Homebrew](https://brew.sh/) tap featuring formulas for:
 ## How do I install these formulae?
 As one command `brew install erikw/tap/<formula>`, or `brew tap erikw/tap` followed by `brew install <formula>`.
 
-Here are all formulas you can install from this tap:
+Here are all formulas providedbby this tap:
 ```console
 $ brew install erikw/tap/xdg-urlview
 $ brew install erikw/tap/restic-automatic-backup-scheduler
