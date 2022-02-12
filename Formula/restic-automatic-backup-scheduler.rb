@@ -4,6 +4,7 @@ class ResticAutomaticBackupScheduler < Formula
   url "https://github.com/erikw/restic-systemd-automatic-backup/archive/refs/tags/v5.2.0.tar.gz"
   sha256 "15f8a553e29ccb6c65ff2044392985834c451c51b4405891a47698442f0a532c"
   license "BSD-3-Clause"
+  revision 2
 
   bottle do
     root_url "https://github.com/erikw/homebrew-tap/releases/download/restic-automatic-backup-scheduler-5.2.0"
@@ -11,10 +12,18 @@ class ResticAutomaticBackupScheduler < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "00dc2792b06c4c2cb7f6c519b19dbeb5e3f045871daa4ebd168d037c96d28d62"
   end
 
+  depends_on "bash"
   depends_on "restic"
 
+  # Variables documented at:
+  # https://docs.brew.sh/Formula-Cookbook#variables-for-directory-locations
   def install
-    system "make", "PREFIX=#{prefix}", "INSTALL_PREFIX=/usr/local", "SYSCONFDIR=#{etc}/..", "install-launchagent"
+    args = %W[
+      PREFIX=#{prefix}
+      INSTALL_PREFIX=#{HOMEBREW_PREFIX}
+      SYSCONFDIR=#{etc}/..
+    ]
+    system "make", "install-launchagent", *args
   end
 
   def caveats
