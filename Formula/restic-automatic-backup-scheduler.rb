@@ -15,8 +15,15 @@ class ResticAutomaticBackupScheduler < Formula
   depends_on "bash"
   depends_on "restic"
 
+  # Variables documented at:
+  # https://docs.brew.sh/Formula-Cookbook#variables-for-directory-locations
   def install
-    system "make", "PREFIX=#{prefix}", "INSTALL_PREFIX=/usr/local", "SYSCONFDIR=#{etc}/..", "install-launchagent"
+    args = %W[
+      PREFIX=#{prefix}
+      INSTALL_PREFIX=#{HOMEBREW_PREFIX}
+      SYSCONFDIR=#{etc}/..
+    ]
+    system "make", "install-launchagent", *args
   end
 
   def caveats
