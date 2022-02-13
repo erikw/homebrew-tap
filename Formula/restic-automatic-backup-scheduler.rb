@@ -1,8 +1,8 @@
 class ResticAutomaticBackupScheduler < Formula
   desc "Automatic restic backup schedule using Backblaze B2 storage & macOS LaunchAgents"
   homepage "https://github.com/erikw/restic-automatic-backup-scheduler"
-  url "https://github.com/erikw/restic-automatic-backup-scheduler/archive/refs/tags/v7.0.0.tar.gz"
-  sha256 "f6befb21cbeb30397945f671117b2c07c7f1d8517438790fb4306e35edee123a"
+  url "https://github.com/erikw/restic-automatic-backup-scheduler/archive/refs/tags/v7.1.0.tar.gz"
+  sha256 "f1a0fd6377e45452e057c782734067970fc642d268d85c1d13ea91492ca912db"
   license "BSD-3-Clause"
   revision 1
 
