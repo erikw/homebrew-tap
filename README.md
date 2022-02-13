@@ -1,7 +1,7 @@
 # Erikw's Homebrew Tap
 My own [Homebrew](https://brew.sh/) tap featuring formulas for:
 * [ozangulle/xdg-urlview](https://github.com/ozangulle/xdg-urlview)
-* [erikw/restic-systemd-automatic-backup](https://github.com/erikw/restic-systemd-automatic-backup)
+* [erikw/restic-automatic-backup-scheduler](https://github.com/erikw/restic-automatic-backup-scheduler)
 
 ## How do I install these formulae?
 As one command `brew install erikw/tap/<formula>`, or `brew tap erikw/tap` followed by `brew install <formula>`.
@@ -56,7 +56,7 @@ $ brew bump-formular-pr xdg-urlview ...
 ```
 
 To build a new [bottle](https://docs.brew.sh/Bottles):
-1. Create a PR in the GitHub repo
+1. Create a PR in the GitHub repo (don't include README.md changes - the workflow can't handle those).
 1. Wait for the PR checks to become green
 1. Apply the label `pr-pull`. This will trigger the second flow from .github/workflows/publish.yml will run and create the bottle.
 
