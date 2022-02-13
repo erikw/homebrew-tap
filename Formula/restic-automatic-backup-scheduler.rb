@@ -1,8 +1,8 @@
 class ResticAutomaticBackupScheduler < Formula
   desc "Automatic restic backup schedule using Backblaze B2 storage & macOS LaunchAgents"
   homepage "https://github.com/erikw/restic-automatic-backup-scheduler"
-  url "https://github.com/erikw/restic-automatic-backup-scheduler/archive/refs/tags/v6.0.0.tar.gz"
-  sha256 "324be7ffbb615eee403bd6d6f5a483cd4aa09357220cc70e6981250526268aa5"
+  url "https://github.com/erikw/restic-automatic-backup-scheduler/archive/refs/tags/v7.0.0.tar.gz"
+  sha256 "f6befb21cbeb30397945f671117b2c07c7f1d8517438790fb4306e35edee123a"
   license "BSD-3-Clause"
   revision 1
 
@@ -31,7 +31,7 @@ class ResticAutomaticBackupScheduler < Formula
     # The LaunchAgent need to have a special name for brew-services to pick it up.
     # Reference: https://docs.brew.sh/Formula-Cookbook#launchd-plist-files
     prefix.install_symlink \
-      "Library/LaunchAgents/com.github.erikw.restic-automatic-backup.plist" => "#{plist_name}.plist"
+      "Library/LaunchAgents/com.github.erikw.restic-automatic-backup-scheduler.plist" => "#{plist_name}.plist"
   end
 
   def caveats
