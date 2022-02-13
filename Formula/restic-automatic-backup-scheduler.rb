@@ -7,9 +7,9 @@ class ResticAutomaticBackupScheduler < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/erikw/homebrew-tap/releases/download/restic-automatic-backup-scheduler-5.3.1_2"
-    sha256 cellar: :any_skip_relocation, big_sur:      "2331370ef765781e9d3ac16aaac9bb5af752215addf0c5aad1830d3696a883f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "18bad2130ca2c3cfdb4add2a278727c8dff243105ff18a5204ea446ad8415baa"
+    root_url "https://github.com/erikw/homebrew-tap/releases/download/restic-automatic-backup-scheduler-6.0.0_1"
+    sha256 cellar: :any_skip_relocation, big_sur:      "f3e30a8966bd7ed1cdd4182fe426215ec4192470ff717a32d44184fdee4e0a88"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "698c258d943b93a6f345107fd7a39a48de4ed05a4b6e6938cf061ae3921fb33c"
   end
 
   depends_on "bash"
