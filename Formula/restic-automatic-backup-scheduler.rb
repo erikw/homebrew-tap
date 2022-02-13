@@ -1,10 +1,10 @@
 class ResticAutomaticBackupScheduler < Formula
   desc "Automatic restic backup schedule using Backblaze B2 storage & macOS LaunchAgents"
-  homepage "https://github.com/erikw/restic-systemd-automatic-backup"
-  url "https://github.com/erikw/restic-systemd-automatic-backup/archive/refs/tags/v5.3.1.tar.gz"
-  sha256 "aeda2d5818d9d18d271db2b73fda5816fb8f0eff9445570364f068dbc29567e2"
+  homepage "https://github.com/erikw/restic-automatic-backup-scheduler"
+  url "https://github.com/erikw/restic-automatic-backup-scheduler/archive/refs/tags/v5.3.1.tar.gz"
+  sha256 "25ef0ad96f6be2a927342ceaa64e6e12d3df2a1a79495affc47024f971311c14"
   license "BSD-3-Clause"
-  revision 1
+  revision 2
 
   bottle do
     root_url "https://github.com/erikw/homebrew-tap/releases/download/restic-automatic-backup-scheduler-5.3.1_1"
@@ -51,7 +51,7 @@ class ResticAutomaticBackupScheduler < Formula
       **NOTE** If you updated the .plist file, you need to restart the service to
       reload the values.
 
-      See full tutorial at https://github.com/erikw/restic-systemd-automatic-backup
+      See full tutorial at https://github.com/erikw/restic-automatic-backup-scheduler
       ===========
     EOS
   end
