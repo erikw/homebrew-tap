@@ -1,8 +1,8 @@
 class ResticAutomaticBackupScheduler < Formula
   desc "Automatic restic backup schedule using Backblaze B2 storage & macOS LaunchAgents"
   homepage "https://github.com/erikw/restic-automatic-backup-scheduler"
-  url "https://github.com/erikw/restic-automatic-backup-scheduler/archive/refs/tags/v7.1.0.tar.gz"
-  sha256 "f1a0fd6377e45452e057c782734067970fc642d268d85c1d13ea91492ca912db"
+  url "https://github.com/erikw/restic-automatic-backup-scheduler/archive/refs/tags/v7.2.0.tar.gz"
+  sha256 "0db7f747067427ae8ec5ad01d7d407588965d5259354401d93adda55c3e2ce79"
   license "BSD-3-Clause"
   revision 1
 
@@ -13,6 +13,7 @@ class ResticAutomaticBackupScheduler < Formula
   end
 
   depends_on "bash"
+  depends_on "erikw/tap/restic-automatic-backup-scheduler-check"
   depends_on "restic"
 
   # Variables documented at:
@@ -22,7 +23,6 @@ class ResticAutomaticBackupScheduler < Formula
       PREFIX=#{prefix}
       INSTALL_PREFIX=#{HOMEBREW_PREFIX}
       SYSCONFDIR=#{etc}/..
-      SYSCONFDIR=#{etc}/..
       LAUNCHAGENTDIR=#{prefix}
     ]
 
@@ -31,7 +31,7 @@ class ResticAutomaticBackupScheduler < Formula
     # The LaunchAgent need to have a special name for brew-services to pick it up.
     # Reference: https://docs.brew.sh/Formula-Cookbook#launchd-plist-files
     prefix.install_symlink \
-      "Library/LaunchAgents/com.github.erikw.restic-automatic-backup-scheduler.plist" => "#{plist_name}.plist"
+      "Library/LaunchAgents/com.github.erikw.restic-backup.plist" => "#{plist_name}.plist"
   end
 
   def caveats
@@ -40,13 +40,15 @@ class ResticAutomaticBackupScheduler < Formula
       To get started with backups, do the following:
 
       1. Edit config files at /etc/restic/*.env.sh
-      1. Enable the service:
+      1. Enable the backup service:
          $ brew services start restic-automatic-backup-scheduler
       2. If you want a different schedule or profile, edit + restart:
          $ vim ~/Library/LaunchAgents/homebrew.mxcl.restic-automatic-backup-scheduler.plist
          $ brew services restart restic-automatic-backup-scheduler
       4. To stop the backups,
          $ brew services stop restic-automatic-backup-scheduler
+      4. (recommended) enable the check service:
+         $ brew services start restic-automatic-backup-scheduler-check
 
       **NOTE** If you updated the .plist file, you need to restart the service to
       reload the values.
