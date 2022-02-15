@@ -56,7 +56,8 @@ $ brew bump-formular-pr xdg-urlview ...
 ```
 
 To build a new [bottle](https://docs.brew.sh/Bottles):
-1. Create a PR in the GitHub repo (don't include README.md changes - the workflow can't handle those).
+1. Create a PR in the GitHub repo
+   *  Only one file changed per PR: `Autosquash can't split commits that modify multiple files.`
 1. Wait for the PR checks to become green
 1. Apply the label `pr-pull`. This will trigger the second flow from .github/workflows/publish.yml will run and create the bottle.
 
