@@ -33,26 +33,25 @@ cd "$(brew --repository erikw/homebrew-tap)"
 
 Test a formula for erros now like:
 ```console
-$ brew audit --new-formula xdg-urlview
-$ brew audit --strict --online xdg-urlview
+$ brew audit --new-formula restic-automatic-backup-scheduler
+$ brew audit --strict --online restic-automatic-backup-scheduler
 ```
 
 Run tests only like:
 ```console
-$ brew test xdg-urlview
+$ brew test restic-automatic-backup-scheduler
 ```
 
 
 Build from source like:
 ```console
-$ brew install --verbose --debug --build-from-source xdg-urlview
-$ brew reinstall --build-from-source xdg-urlview
+$ brew install --verbose --debug --build-from-source restic-automatic-backup-scheduler
+$ brew reinstall --build-from-source restic-automatic-backup-scheduler
 ```
 
-
-New versions of xdg-urlview can be updated with
+New versions of a formula can be updated with
 ```console
-$ brew bump-formular-pr xdg-urlview ...
+$ brew bump-formular-pr restic-automatic-backup-scheduler ...
 ```
 
 To build a new [bottle](https://docs.brew.sh/Bottles):
