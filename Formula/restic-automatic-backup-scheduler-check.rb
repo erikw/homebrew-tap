@@ -5,6 +5,7 @@ class ResticAutomaticBackupSchedulerCheck < Formula
   url "https://github.com/erikw/restic-automatic-backup-scheduler/archive/refs/tags/v7.2.0.tar.gz"
   sha256 "0db7f747067427ae8ec5ad01d7d407588965d5259354401d93adda55c3e2ce79"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
     root_url "https://github.com/erikw/homebrew-tap/releases/download/restic-automatic-backup-scheduler-check-7.2.0"
