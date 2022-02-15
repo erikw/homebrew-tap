@@ -49,14 +49,17 @@ $ brew install --verbose --debug --build-from-source restic-automatic-backup-sch
 $ brew reinstall --build-from-source restic-automatic-backup-scheduler
 ```
 
-New versions of a formula can be updated with
 ```console
-$ brew bump-formular-pr restic-automatic-backup-scheduler ...
+$ brew bump-formula-pr --version 7.3.0 restic-automatic-backup-scheduler
 ```
 
 To build a new [bottle](https://docs.brew.sh/Bottles):
 1. Create a PR in the GitHub repo
    *  Only one file changed per PR: `Autosquash can't split commits that modify multiple files.`
+   * For easy version upgrades:
+   ```console
+   $ brew bump-formula-pr --version 7.3.0 restic-automatic-backup-scheduler
+   ```
 1. Wait for the PR checks to become green
 1. Apply the label `pr-pull`. This will trigger the second flow from .github/workflows/publish.yml will run and create the bottle.
 
