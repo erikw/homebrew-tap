@@ -2,8 +2,8 @@
 class ResticAutomaticBackupSchedulerCheck < Formula
   desc "Install restic-check LaunchAgent for restic-automatic-backup-scheduler formula"
   homepage "https://github.com/erikw/restic-automatic-backup-scheduler"
-  url "https://github.com/erikw/restic-automatic-backup-scheduler/archive/refs/tags/v7.3.0.tar.gz"
-  sha256 "df942e5ba780311cdb0ff9db6e43e4e165d73567bbc662be9a5f808e9b51ddea"
+  url "https://github.com/erikw/restic-automatic-backup-scheduler/archive/refs/tags/v7.3.1.tar.gz"
+  sha256 "099a0b799a126194ebc5a057e84de52013c7491e801a562e9e993bf83dca2851"
   license "BSD-3-Clause"
 
   bottle do
