@@ -24,7 +24,7 @@ $ brew install erikw/tap/restic-automatic-backup-scheduler
    ```console
    $ brew tap erikw/tap git@github.com:erikw/homebrew-tap.git
    ```
-  * At a later point, return here by:
+  * At a later point, return here with:
      ```console
      cd "$(brew --repository erikw/homebrew-tap)"
      ```
