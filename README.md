@@ -1,4 +1,7 @@
 # Erikw's Homebrew Tap
+[![brew test-bot](https://github.com/erikw/homebrew-tap/actions/workflows/tests.yml/badge.svg)](https://github.com/erikw/homebrew-tap/actions/workflows/tests.yml)
+[![brew pr-pull](https://github.com/erikw/homebrew-tap/actions/workflows/publish.yml/badge.svg)](https://github.com/erikw/homebrew-tap/actions/workflows/publish.yml)
+
 My own [Homebrew](https://brew.sh/) tap featuring formulas for:
 * [ozangulle/xdg-urlview](https://github.com/ozangulle/xdg-urlview)
 * [erikw/restic-automatic-backup-scheduler](https://github.com/erikw/restic-automatic-backup-scheduler)
