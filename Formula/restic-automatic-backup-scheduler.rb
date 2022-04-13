@@ -6,9 +6,9 @@ class ResticAutomaticBackupScheduler < Formula
   license "BSD-3-Clause"
 
   bottle do
-    root_url "https://github.com/erikw/homebrew-tap/releases/download/restic-automatic-backup-scheduler-7.3.0"
-    sha256 cellar: :any_skip_relocation, big_sur:      "88ac5b436c22415efde7c27dde92b28d1e73349d70bae1f2f7f02ef541cda363"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "80a641a32d9495a0a160b9af59c41653123c33f77e6f23e6379a67c6405f1b81"
+    root_url "https://github.com/erikw/homebrew-tap/releases/download/restic-automatic-backup-scheduler-7.3.2"
+    sha256 cellar: :any_skip_relocation, big_sur:      "727666001d810072bc01b2eba2535d1ad3a765f3a24dad9ff620d5b63a2da37e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "61b5bad809e3ea1546528a87a41e091edafe63b2404b1b7838d61a7e95425acc"
   end
 
   depends_on "bash"
