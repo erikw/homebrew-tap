@@ -31,6 +31,13 @@ $ brew install erikw/tap/restic-automatic-backup-scheduler
      ```console
      cd "$(brew --repository erikw/homebrew-tap)"
      ```
+* Setup a GitHub personal access token
+  * Create new token: https://github.com/settings/tokens/new?scopes=gist,repo,workflow&description=Homebrew
+  * Add it to `.env`:
+    ``` console
+    echo 'HOMEBREW_GITHUB_API_TOKEN=your_token_here' >> .env
+    ```
+  * Make sure to have https://direnv.net/ installed in your shell so it will be loaded.
 * To create a new Formula:
    ```console
    $ brew --tap erikw/homebrew-tap <url-to-source-files.tar.gz>
