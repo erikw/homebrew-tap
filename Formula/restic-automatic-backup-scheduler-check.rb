@@ -1,4 +1,4 @@
-# This formula is not intended to be installed on its own, just as a dependency for restic-automatic-backup-scheduler
+# This formula is not intended to be installed on its own, just as a dependency for restic-automatic-backup-scheduler.
 class ResticAutomaticBackupSchedulerCheck < Formula
   desc "Install restic-check LaunchAgent for restic-automatic-backup-scheduler formula"
   homepage "https://github.com/erikw/restic-automatic-backup-scheduler"
