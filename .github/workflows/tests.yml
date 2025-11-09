@@ -33,6 +33,11 @@ jobs:
           key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ matrix.os }}-rubygems-
 
+      - name: Clean up untracked files in homebrew-core
+        run: |
+          git -C "$(brew --repo homebrew/core)" stash -u || true
+          git -C "$(brew --repo homebrew/core)" clean -d -f || true
+
       - run: brew test-bot --only-cleanup-before
 
       - run: brew test-bot --only-setup
