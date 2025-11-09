@@ -12,7 +12,7 @@ jobs:
   test-bot:
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-22.04, macos-15-intel, macos-26]
     runs-on: ${{ matrix.os }}
     permissions:
       actions: read
