@@ -33,6 +33,7 @@ jobs:
           key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ matrix.os }}-rubygems-
 
+      # Prevent error "Uncommitted files" in  hombrew/homebrew-core
       - name: Clean up untracked files in homebrew-core
         run: |
           git -C "$(brew --repo homebrew/core)" stash -u || true
