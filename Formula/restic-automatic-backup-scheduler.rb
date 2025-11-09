@@ -58,7 +58,7 @@ class ResticAutomaticBackupScheduler < Formula
 
   test do
     act = shell_output("#{bin}/resticw -h").lines.first.strip
-    exp = "A little wrapper over restic just to handle profiles and environment loading."
+    exp = "A little wrapper over restic just to handle profiles and environment loading, with small extensions."
     assert_equal exp, act
   end
 end
